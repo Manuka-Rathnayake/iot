@@ -1,0 +1,255 @@
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.all {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.SideBar {
+  background-color: black;
+  height: 100%;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto;
+  font-size: 35px;
+  font-family: sans-serif;
+  color : rgba(160,255,255,1);
+  
+}
+
+
+/* Mobile screens */
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .header h1 {
+    margin: 10px 0;
+    font-size: 28px;
+  }
+}
+
+/* Tablets and larger screens */
+@media only screen and (min-width: 601px) {
+  .header {
+    height: 150px;
+  }
+  
+  .header h1 {
+    font-size: 35px;
+  }
+}
+
+
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+.devices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row1, .row2{
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  flex-wrap: wrap;
+}
+
+.box{
+    width: 190px;
+    height: 185px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+    padding: 10px 20px;
+    position: relative;
+    margin: 50px;
+
+    flex-shrink: 0;
+
+}
+
+.box p{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 5px;
+    font-family: sans-serif;
+}
+
+.box img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:27px;
+    left: 175px;
+}
+
+.box .light{
+    display: none;
+    color: #3976f6;
+    font-size: 35px;
+    position: absolute;
+    top:29px;
+    left: 170px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .box {
+      width: 150px; /* adjust width for smaller screens */
+      height: 145px; /* adjust height for smaller screens */
+      margin: 20px; /* reduce margin for smaller screens */
+  }
+  .box p {
+      font-size: 18px; /* adjust font size for smaller screens */
+  }
+  .box img {
+      width: 25px; /* adjust image size for smaller screens */
+      height: 25px; /* adjust image size for smaller screens */
+      top: 22px; /* adjust image position for smaller screens */
+      left: 135px; /* adjust image position for smaller screens */
+  }
+  .box .light {
+      font-size: 28px; /* adjust light size for smaller screens */
+      top: 24px; /* adjust light position for smaller screens */
+      left: 130px; /* adjust light position for smaller screens */
+  }
+}
+
+
+
+
+
+/* toggle */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 35px 30px 0px 65px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .rotate {
+    animation: rotation 1s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }  
+
+  
+
+
+
+
